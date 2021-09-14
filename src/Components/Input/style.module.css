@@ -1,0 +1,17 @@
+.inputField {
+    width: calc(100% - 30px);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    line-height: 1.5;
+    background: none;
+    font-size: 14px;
+    color: #444;
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
+}
+
+.inputField:focus-visible {
+    border-bottom: 1px solid #adadad;
+}

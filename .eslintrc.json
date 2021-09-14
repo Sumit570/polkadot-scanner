@@ -1,0 +1,113 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:import/react"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        },
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ]
+    },
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "no-use-before-define": "off",
+        "no-plusplus": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error"
+        ],
+        "quotes": [
+            1,
+            "double"
+        ],
+        "no-restricted-imports": [
+            "error",
+            "never"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "object-curly-newline": [
+            "error",
+            "never"
+        ],
+        "import/no-unresolved": [
+            0,
+            {
+                "caseSensitive": false
+            }
+        ],
+        "sort-imports": [
+            "error",
+            {
+                "ignoreCase": true,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": true,
+                "allowSeparatedGroups": false
+            }
+        ],
+        "import/no-duplicates": "off",
+        "arrow-body-style": "off",
+        "react/no-array-index-key": "off",
+        "no-unused-vars": "off",
+        "camelcase": "off",
+        "no-console": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "max-len": [
+            "error",
+            {
+                "code": 180,
+                "tabWidth": 2
+            }
+        ],
+        "react/no-danger": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
+    }
+}
