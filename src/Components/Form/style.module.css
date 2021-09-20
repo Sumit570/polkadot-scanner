@@ -1,0 +1,40 @@
+.form {
+    width: 90%;
+}
+
+.formFieldSet {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    padding: 10px 25px;
+    border: 2px solid #653551;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.legend{
+    color: #653551;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid #653551;
+    color: #653551;
+    padding: 5px 40px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    color: #fff;
+    background-color: #653551;
+    box-shadow: 0 0 7px #777777;
+    cursor: pointer;
+}
