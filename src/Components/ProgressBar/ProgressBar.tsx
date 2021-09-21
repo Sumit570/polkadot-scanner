@@ -1,21 +1,18 @@
-import React from "react";
-
+import React, { useContext } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { AppContext, ContextType } from "../../Context/Context";
 
-interface Props {
-  progress: number;
-}
-
-const Progress: React.FC<Props> = ({ progress }) => {
+const Progress: React.FC = () => {
+  const { progress } = useContext(AppContext) as ContextType;
   return (
     <ProgressBar
       completed={progress}
       bgColor="#653551"
       borderRadius="0px"
-      height="6px"
+      height="4px"
       baseBgColor="#fff"
       isLabelVisible={false}
-      transitionDuration="5s"
+      transitionDuration="1s"
       width="100%"
       margin="auto"
     />

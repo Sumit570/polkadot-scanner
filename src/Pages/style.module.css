@@ -3,10 +3,9 @@
 }
 
 .homePageContent {
-    width: 90%;
-    box-shadow: 0 0 7px #dfdfdf;
     background-color: #fff;
     margin: auto;
     margin-top: 80px;
     border-radius: 10px;
+    position: relative;
 }

@@ -2,16 +2,19 @@
     { "label": "End Point",
       "name": "endPoint",
       "placeHolder": "Enter the endpoint starting with wss://, http:// or https:// here...",
-      "required": true
+      "required": true,
+      "type": "text"
     },
     { "label": "Start Block",
       "name": "startBlock",
       "placeHolder": "Enter the start block here...",
-      "required": true
+      "required": true,
+      "type": "number"
     },
     { "label": "End Block",
       "name": "endBlock",
       "placeHolder": "Enter the end block here...",
-      "required": true
+      "required": true,
+      "type": "number"
     }
 ]

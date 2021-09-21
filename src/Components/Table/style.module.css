@@ -1,0 +1,30 @@
+.eventsTable {
+  border-collapse: collapse;
+  width: 90%;
+  box-shadow: 0 0 7px #ccc;
+  margin: 35px auto;
+}
+  
+.eventsTable td, .eventsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-transform: capitalize;
+}
+
+.eventsTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.eventsTable thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #653551;
+  color: white;
+}
+
+.loadingInfo {
+    text-align: center;
+    color: #653551;
+    margin: 10px auto;
+}

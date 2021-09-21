@@ -1,35 +1,35 @@
-import React from "react";
-import FormResponse from "../../Types/FormResponse";
+import React, { useContext } from "react";
 import FormError from "../FormError/FormError";
 import styles from "./style.module.css";
+import { AppContext, ContextType } from "../../Context/Context";
 
 interface Props {
-    handleInput(ev: any): any;
-    value: number | string;
     placeHolder: string;
     name: string;
     label: string;
-    formErrors: any;
     required: boolean;
+    type: string;
 }
 
-const Input: React.FC<Props> = ({ handleInput, value, placeHolder, label, name, formErrors, required }) => {
-  // eslint-disable-next-line no-nested-ternary
+const Input: React.FC<Props> = ({ placeHolder, label, name, required, type }) => {
+  const { handleChange, endBlock, endPoint, startBlock, formErrors } = useContext(AppContext) as ContextType;
+  const formError: any = formErrors;
   return (
     <div className={styles.inputErrorContainer}>
       <div className={styles.input}>
         <input
-          type="text"
+          type={type}
           name={name}
           id={name}
-          onChange={handleInput}
-          value={value}
+          onChange={handleChange}
+          // eslint-disable-next-line no-nested-ternary
+          value={name === "endPoint" ? endPoint : (name === "startBlock" ? startBlock : endBlock)}
           required={required}
           className={styles.inputField}
         />
         <label className={styles.inputLabel} htmlFor={name}>{label}</label>
       </div>
-      <FormError formError={formErrors && formErrors[name] ? formErrors[name] : ""} />
+      <FormError formError={formError && formError[name] ? formError[name] : ""} />
     </div>
   );
 };
